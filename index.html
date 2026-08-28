@@ -2,655 +2,943 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>For Kalpana ❤️</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-    font-family:Georgia,"Times New Roman",serif;
-    background:#10060c;
-    color:white;
-    overflow-x:hidden;
+font-family:Georgia,"Times New Roman",serif;
+background:#10060c;
+color:white;
+overflow-x:hidden
 }
-
-/* PAGE */
 
 .page{
-    min-height:100vh;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:25px;
-    position:relative;
-    overflow:hidden;
+min-height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:22px;
+position:relative
 }
 
-.page.active{
-    display:flex;
-}
-
-.page::before{
-    content:"";
-    position:absolute;
-    width:450px;
-    height:450px;
-    background:rgba(255,40,110,.13);
-    filter:blur(100px);
-    border-radius:50%;
-    pointer-events:none;
-}
+.page.active{display:flex}
 
 .content{
-    width:100%;
-    max-width:760px;
-    position:relative;
-    z-index:2;
+width:100%;
+max-width:760px;
+position:relative;
+z-index:2
 }
-
-/* HEART */
 
 .heart{
-    font-size:75px;
-    margin-bottom:20px;
-    animation:heartbeat 1.5s infinite;
+font-size:70px;
+animation:beat 1.5s infinite;
+margin-bottom:15px
 }
 
-@keyframes heartbeat{
-
-    0%,100%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.15);
-    }
-
+@keyframes beat{
+50%{transform:scale(1.15)}
 }
-
-/* HEADINGS */
 
 h1{
-    font-size:clamp(38px,8vw,70px);
-    margin-bottom:15px;
+font-size:clamp(38px,8vw,65px);
+margin-bottom:15px
 }
 
 .subtitle{
-    color:#f6b4c9;
-    font-size:18px;
-    line-height:1.7;
-}
-
-/* BUTTON */
-
-button{
-    margin-top:30px;
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    background:linear-gradient(135deg,#ff477e,#ff174f);
-    color:white;
-    font-size:17px;
-    cursor:pointer;
-    box-shadow:0 10px 35px rgba(255,30,90,.35);
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.06);
+color:#f6b4c9;
+font-size:18px;
+line-height:1.7
 }
 
 .small{
-    margin-top:15px;
-    color:#c991a6;
-    font-size:14px;
+color:#c991a6;
+font-size:14px;
+margin-top:15px
 }
 
-/* PASSWORD */
+button{
+margin:18px 7px 0;
+padding:14px 28px;
+border:0;
+border-radius:50px;
+background:linear-gradient(135deg,#ff477e,#ff174f);
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 8px 30px #ff174f44
+}
 
-.password-box{
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.13);
-    padding:40px 25px;
-    border-radius:25px;
-    backdrop-filter:blur(15px);
-    box-shadow:0 20px 70px rgba(0,0,0,.35);
+button:hover{transform:scale(1.05)}
+
+.box{
+background:#ffffff0d;
+border:1px solid #ffffff20;
+padding:32px 22px;
+border-radius:25px;
+backdrop-filter:blur(15px)
 }
 
 input{
-    width:100%;
-    max-width:300px;
-    padding:15px;
-    margin-top:25px;
-    border-radius:12px;
-    border:1px solid #754052;
-    outline:none;
-    background:#1b0b12;
-    color:white;
-    text-align:center;
-    font-size:21px;
-    letter-spacing:6px;
-}
-
-input::placeholder{
-    color:#73515e;
+width:100%;
+max-width:280px;
+padding:15px;
+margin:22px 0;
+border-radius:12px;
+border:1px solid #754052;
+background:#1b0b12;
+color:white;
+text-align:center;
+font-size:21px;
+letter-spacing:6px
 }
 
 .error{
-    display:none;
-    color:#ff7194;
-    margin-top:15px;
+display:none;
+color:#ff7194;
+margin-top:10px
 }
 
-/* SHAYARI */
-
 .shayari{
-    background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,180,200,.15);
-    padding:35px 25px;
-    border-radius:25px;
-    line-height:2;
-    font-size:19px;
-    color:#ffe6ed;
-    box-shadow:0 20px 70px rgba(0,0,0,.35);
+background:#ffffff0d;
+border:1px solid #ffb4c81f;
+padding:30px 22px;
+border-radius:25px;
+line-height:2;
+font-size:18px
 }
 
 .name{
-    margin-top:30px;
-    font-size:25px;
-    color:#ff9fbb;
-    font-style:italic;
+margin-top:25px;
+font-size:25px;
+color:#ff9fbb;
+font-style:italic
 }
 
-/* MEMORIES */
+/* MENU */
+
+.menu{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+margin-top:30px
+}
+
+.menu button{
+width:100%;
+margin:0;
+font-size:18px
+}
+
+/* PHOTOS */
 
 .memory-page{
-    align-items:flex-start;
-    overflow-y:auto;
-    padding-top:45px;
-    padding-bottom:60px;
+align-items:flex-start;
+overflow-y:auto;
+padding-top:40px;
+padding-bottom:50px
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-top:30px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px
 }
 
-.photo-card{
-    background:rgba(255,255,255,.06);
-    padding:8px;
-    border-radius:20px;
-    border:1px solid rgba(255,180,200,.15);
-    box-shadow:0 15px 40px rgba(0,0,0,.4);
+.photo{
+background:#ffffff0d;
+padding:7px;
+border-radius:18px
 }
 
-.photo-card img{
-    display:block;
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:.4s;
+.photo img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:13px
 }
 
-.photo-card img:hover{
-    transform:scale(1.03);
+/* GAME */
+
+.game-page{
+align-items:flex-start;
+padding-top:25px;
+overflow-y:auto
 }
 
-/* MUSIC */
-
-.music-box{
-    margin-top:30px;
-    padding:18px;
-    border-radius:20px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,180,200,.12);
+.game-info{
+display:flex;
+justify-content:space-around;
+margin:15px 0;
+color:#ffc1d2
 }
 
-.music-box p{
-    color:#f3b5c8;
-    margin-bottom:10px;
+.game{
+position:relative;
+width:100%;
+max-width:700px;
+height:480px;
+margin:auto;
+overflow:hidden;
+border-radius:25px;
+border:2px solid #ff477e55;
+background:linear-gradient(#260c1c,#10060c)
 }
 
-audio{
-    width:100%;
+/* GAME 1 */
+
+.player{
+position:absolute;
+font-size:48px;
+user-select:none;
+transition:left .12s,top .12s
 }
 
-/* FLOATING HEARTS */
+.jagan{z-index:5}
+.kalpana{z-index:4}
+
+/* GAME 2 */
+
+.runner-ground{
+position:absolute;
+bottom:0;
+height:75px;
+width:100%;
+background:#24101b
+}
+
+.runner{
+position:absolute;
+bottom:65px;
+left:70px;
+font-size:50px;
+z-index:5
+}
+
+.chaser{
+position:absolute;
+bottom:65px;
+left:15px;
+font-size:48px;
+z-index:4
+}
+
+.obstacle{
+position:absolute;
+bottom:65px;
+font-size:38px
+}
+
+.jump{
+animation:jump .65s ease
+}
+
+@keyframes jump{
+50%{transform:translateY(-150px)}
+}
+
+/* HEARTS */
 
 .floating-heart{
-    position:fixed;
-    bottom:-30px;
-    font-size:20px;
-    animation:floatUp 6s linear forwards;
-    opacity:.6;
-    pointer-events:none;
-    z-index:1;
+position:fixed;
+bottom:-30px;
+font-size:20px;
+animation:float 6s linear forwards;
+opacity:.5;
+pointer-events:none
 }
 
-@keyframes floatUp{
-
-    from{
-        transform:translateY(0);
-        opacity:0;
-    }
-
-    20%{
-        opacity:.6;
-    }
-
-    to{
-        transform:translateY(-110vh);
-        opacity:0;
-    }
-
+@keyframes float{
+to{
+transform:translateY(-110vh);
+opacity:0
 }
-
-/* MOBILE */
+}
 
 @media(max-width:600px){
 
-    .gallery{
-        grid-template-columns:1fr;
-    }
-
-    .photo-card img{
-        height:auto;
-        max-height:550px;
-    }
-
-    .shayari{
-        font-size:17px;
-        line-height:1.9;
-    }
-
+.gallery{
+grid-template-columns:1fr
 }
 
+.photo img{
+height:auto;
+max-height:550px
+}
+
+.game{
+height:430px
+}
+
+}
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ========================= -->
-<!-- PAGE 1 : WELCOME -->
-<!-- ========================= -->
+<!-- PAGE 1 -->
 
 <section class="page active" id="page1">
-
 <div class="content">
 
-    <div class="heart">❤️</div>
+<div class="heart">❤️</div>
 
-    <h1>Hey You...</h1>
+<h1>Hey You...</h1>
 
-    <p class="subtitle">
-        This little place exists for one special person.
-        <br>
-        And maybe... you already know who you are.
-    </p>
+<p class="subtitle">
+This little place exists for one special person.
+<br>
+And maybe... you already know who you are.
+</p>
 
-    <button onclick="goToPage(2)">
-        R U JK
-    </button>
+<button onclick="go(2)">R U JK</button>
 
-    <p class="small">
-        A little surprise is waiting inside...
-    </p>
+<p class="small">
+A little surprise is waiting inside...
+</p>
 
 </div>
-
 </section>
 
 
-
-<!-- ========================= -->
-<!-- PAGE 2 : PASSWORD -->
-<!-- ========================= -->
+<!-- PAGE 2 -->
 
 <section class="page" id="page2">
-
 <div class="content">
 
-<div class="password-box">
+<div class="box">
 
-    <div class="heart" style="font-size:55px;">
-        🔐
-    </div>
+<div class="heart" style="font-size:55px">🔐</div>
 
-    <h1 style="font-size:40px;">
-        Only For You
-    </h1>
+<h1 style="font-size:40px">Only For You</h1>
 
-    <p class="subtitle">
-        Enter the secret code
-    </p>
+<p class="subtitle">Enter the secret code</p>
 
-    <p class="small">
-        Hint: JK DOB
-    </p>
+<p class="small">Hint: JK DOB</p>
 
-    <input
-        type="password"
-        id="code"
-        maxlength="4"
-        placeholder="••••"
-    >
+<input id="code" maxlength="4" type="password" placeholder="••••">
 
-    <br>
+<br>
 
-    <button onclick="checkCode()">
-        Unlock ❤️
-    </button>
+<button onclick="checkCode()">Unlock ❤️</button>
 
-    <p class="error" id="error">
-        That's not the right code ❤️
-    </p>
+<p class="error" id="error">
+That's not the right code ❤️
+</p>
 
 </div>
 
 </div>
-
 </section>
 
 
-
-<!-- ========================= -->
-<!-- PAGE 3 : SHAYARI -->
-<!-- ========================= -->
+<!-- PAGE 3 -->
 
 <section class="page" id="page3">
-
 <div class="content">
 
-    <div class="heart">
-        💗
-    </div>
+<div class="heart">💗</div>
 
-    <h1 style="font-size:42px;">
-        For You, Kalpana
-    </h1>
+<h1 style="font-size:42px">
+For You, Kalpana
+</h1>
 
-    <div class="shayari">
+<div class="shayari">
 
-        Teri aankhon mein kuch aisi baat hai,<br>
-        ki khamoshi bhi unmein ek jazbaat hai.<br><br>
+Teri aankhon mein kuch aisi baat hai,<br>
+ki khamoshi bhi unmein ek jazbaat hai.<br><br>
 
-        Teri palken jab dheere se jhukti hain,<br>
-        jaise chandni raat mein sitare chupte hain.<br><br>
+Teri palken jab dheere se jhukti hain,<br>
+jaise chandni raat mein sitare chupte hain.<br><br>
 
-        Tere honton ki woh halki si muskaan,<br>
-        mere liye ban jaati hai poori ek dastaan.<br><br>
+Tere honton ki woh halki si muskaan,<br>
+mere liye ban jaati hai poori ek dastaan.<br><br>
 
-        Tere gaalon ki woh masoom si laali,<br>
-        jaise subah ki pehli kiran ho nirali.<br><br>
+Tere gaalon ki woh masoom si laali,<br>
+jaise subah ki pehli kiran ho nirali.<br><br>
 
-        Teri har ada, tera har andaaz,<br>
-        dil ko kar deta hai ek pal mein be-awaaz.<br><br>
+Teri har ada, tera har andaaz,<br>
+dil ko kar deta hai ek pal mein be-awaaz.<br><br>
 
-        Teri khoobsurti ko lafzon mein kaise bayan karun,<br>
-        tu saamne ho to bas tujhe dekhta rahun.<br><br>
+Teri khoobsurti ko lafzon mein kaise bayan karun,<br>
+tu saamne ho to bas tujhe dekhta rahun.
 
-        Teri khushboo si yaadon mein bas jaati hai,<br>
-        aur teri ek muskaan meri duniya saja jaati hai.
-
-        <div class="name">
-            — Kalpana, My Love ❤️
-        </div>
-
-    </div>
-
-
-    <!-- MUSIC AREA -->
-
-    <div class="music-box">
-
-        <p>🎵 A little music for you</p>
-
-        <!--
-        MUSIC BAAD MEIN ADD KARENGE.
-
-        Jab music file GitHub par upload hogi,
-        yahan uska naam lagayenge.
-
-        Example:
-
-        <audio controls>
-            <source src="love-song.mp3" type="audio/mpeg">
-        </audio>
-        -->
-
-        <p class="small">
-            Our song will be here soon ❤️
-        </p>
-
-    </div>
-
-
-    <button onclick="goToPage(4)">
-        Our Memories 📸
-    </button>
+<div class="name">
+— Kalpana, My Love ❤️
+</div>
 
 </div>
 
+<button onclick="go(4)">Continue ❤️</button>
+
+</div>
 </section>
 
 
+<!-- PAGE 4 MENU -->
 
-<!-- ========================= -->
-<!-- PAGE 4 : PHOTOS -->
-<!-- ========================= -->
-
-<section class="page memory-page" id="page4">
-
+<section class="page" id="page4">
 <div class="content">
 
-    <div class="heart" style="font-size:55px;">
-        📸
-    </div>
+<div class="heart">💕</div>
 
-    <h1 style="font-size:42px;">
-        Our Memories
-    </h1>
+<h1 style="font-size:42px">
+Our Little World
+</h1>
 
-    <p class="subtitle">
-        Some moments are too beautiful to forget...
-    </p>
+<p class="subtitle">
+Choose what you want to explore ❤️
+</p>
 
+<div class="menu">
 
-    <div class="gallery">
+<button onclick="startGame1()">
+🎮 Jagan & Kalpana — Catch Me
+</button>
 
+<button onclick="startGame2()">
+🏃 Jagan Runner — Kalpana Chase
+</button>
 
-        <!-- PHOTO 1 -->
-
-        <div class="photo-card">
-
-            <img
-                src="1787715233287.png"
-                alt="Our Memory 1"
-            >
-
-        </div>
-
-
-        <!-- PHOTO 2 -->
-
-        <div class="photo-card">
-
-            <img
-                src="Snapchat-1027177372.jpg"
-                alt="Our Memory 2"
-            >
-
-        </div>
-
-
-        <!-- PHOTO 3 -->
-
-        <div class="photo-card">
-
-            <img
-                src="Snapchat-1190221450.jpg"
-                alt="Our Memory 3"
-            >
-
-        </div>
-
-
-        <!-- PHOTO 4 -->
-
-        <div class="photo-card">
-
-            <img
-                src="Snapchat-557918796.jpg"
-                alt="Our Memory 4"
-            >
-
-        </div>
-
-    </div>
-
-
-    <button onclick="goToPage(3)">
-        ← Back
-    </button>
+<button onclick="go(7)">
+📸 Our Memories
+</button>
 
 </div>
 
+</div>
 </section>
 
+
+<!-- GAME 1 -->
+
+<section class="page game-page" id="page5">
+<div class="content">
+
+<h1 style="font-size:35px">
+Catch Me ❤️
+</h1>
+
+<p class="subtitle">
+Jagan is trying to escape... Kalpana is coming to catch him!
+</p>
+
+<div class="game-info">
+<div>Jagan 🧑 <span id="score1">0</span></div>
+<div>Time ⏱️ <span id="time1">30</span></div>
+</div>
+
+<div class="game" id="game1">
+
+<div class="player jagan" id="jagan1">🧑</div>
+<div class="player kalpana" id="kalpana1">👩</div>
+
+</div>
+
+<button onclick="moveJagan()">
+🏃 Jagan Run
+</button>
+
+<button onclick="endGame1()">
+← Back
+</button>
+
+<p class="small">
+Keep tapping “Jagan Run” before Kalpana catches him!
+</p>
+
+</div>
+</section>
+
+
+<!-- GAME 2 -->
+
+<section class="page game-page" id="page6">
+<div class="content">
+
+<h1 style="font-size:35px">
+Jagan Runner 🏃
+</h1>
+
+<p class="subtitle">
+Run, jump and don't let Kalpana catch you!
+</p>
+
+<div class="game-info">
+<div>Score ⭐ <span id="score2">0</span></div>
+<div>Best ❤️ <span id="best2">0</span></div>
+</div>
+
+<div class="game" id="game2">
+
+<div class="runner" id="runner">🧑</div>
+<div class="chaser" id="chaser">👩</div>
+
+<div class="runner-ground"></div>
+
+</div>
+
+<button onclick="jump()">⬆️ Jump</button>
+
+<button onclick="startGame2()">🔄 Restart</button>
+
+<button onclick="go(4)">← Back</button>
+
+<p class="small">
+Tap Jump or tap the game area to jump.
+</p>
+
+</div>
+</section>
+
+
+<!-- PHOTOS -->
+
+<section class="page memory-page" id="page7">
+<div class="content">
+
+<div class="heart" style="font-size:55px">
+📸
+</div>
+
+<h1 style="font-size:42px">
+Our Memories
+</h1>
+
+<p class="subtitle">
+Some moments are too beautiful to forget...
+</p>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="1787715233287.png" alt="Our Memory 1">
+</div>
+
+<div class="photo">
+<img src="Snapchat-1027177372.jpg" alt="Our Memory 2">
+</div>
+
+<div class="photo">
+<img src="Snapchat-1190221450.jpg" alt="Our Memory 3">
+</div>
+
+<div class="photo">
+<img src="Snapchat-557918796.jpg" alt="Our Memory 4">
+</div>
+
+</div>
+
+<button onclick="go(4)">← Back</button>
+
+</div>
+</section>
 
 
 <script>
 
+/* NAVIGATION */
 
-/* ========================= */
-/* PAGE NAVIGATION */
-/* ========================= */
+function go(n){
 
-function goToPage(pageNumber){
+document.querySelectorAll(".page")
+.forEach(p=>p.classList.remove("active"));
 
-    document
-    .querySelectorAll(".page")
-    .forEach(function(page){
+document.getElementById("page"+n)
+.classList.add("active");
 
-        page.classList.remove("active");
-
-    });
-
-
-    document
-    .getElementById("page" + pageNumber)
-    .classList.add("active");
-
-
-    window.scrollTo(0,0);
-
+window.scrollTo(0,0);
 }
 
 
-
-/* ========================= */
 /* PASSWORD */
-/* ========================= */
 
 function checkCode(){
 
-    const code =
-        document.getElementById("code").value;
+let code=document.getElementById("code").value;
+let error=document.getElementById("error");
 
-    const error =
-        document.getElementById("error");
+if(code==="2511"){
 
+error.style.display="none";
+go(3);
 
-    if(code === "2511"){
+}else{
 
-        error.style.display = "none";
+error.style.display="block";
 
-        goToPage(3);
-
-    }
-
-    else{
-
-        error.style.display = "block";
-
-    }
+}
 
 }
 
 
+/* SOUND */
 
-/* ========================= */
-/* ENTER KEY PASSWORD */
-/* ========================= */
+let audioContext;
 
-document
-.getElementById("code")
-.addEventListener("keydown",function(event){
+function sound(freq,duration){
 
-    if(event.key === "Enter"){
+try{
 
-        checkCode();
+audioContext =
+audioContext ||
+new (window.AudioContext || window.webkitAudioContext)();
 
-    }
+let osc=audioContext.createOscillator();
+let gain=audioContext.createGain();
+
+osc.frequency.value=freq;
+osc.type="sine";
+
+gain.gain.setValueAtTime(.08,audioContext.currentTime);
+gain.gain.exponentialRampToValueAtTime(
+.001,
+audioContext.currentTime+duration
+);
+
+osc.connect(gain);
+gain.connect(audioContext.destination);
+
+osc.start();
+osc.stop(audioContext.currentTime+duration);
+
+}catch(e){}
+
+}
+
+
+/* GAME 1 */
+
+let game1Timer;
+let game1Move;
+let score1=0;
+let time1=30;
+let running1=false;
+
+function startGame1(){
+
+go(5);
+
+clearInterval(game1Timer);
+clearInterval(game1Move);
+
+score1=0;
+time1=30;
+running1=true;
+
+document.getElementById("score1").textContent=score1;
+document.getElementById("time1").textContent=time1;
+
+let jagan=document.getElementById("jagan1");
+let kalpana=document.getElementById("kalpana1");
+
+jagan.style.left="70%";
+jagan.style.top="45%";
+
+kalpana.style.left="10%";
+kalpana.style.top="45%";
+
+
+game1Move=setInterval(()=>{
+
+if(!running1)return;
+
+let x=parseFloat(kalpana.style.left);
+let y=parseFloat(kalpana.style.top);
+
+let jx=parseFloat(jagan.style.left);
+let jy=parseFloat(jagan.style.top);
+
+let dx=jx-x;
+let dy=jy-y;
+
+let distance=Math.sqrt(dx*dx+dy*dy);
+
+if(distance<9){
+
+sound(180,.3);
+
+alert("Kalpana caught Jagan! ❤️");
+
+endGame1();
+
+return;
+
+}
+
+x+=dx*.035;
+y+=dy*.035;
+
+kalpana.style.left=x+"%";
+kalpana.style.top=y+"%";
+
+},80);
+
+
+game1Timer=setInterval(()=>{
+
+time1--;
+
+document.getElementById("time1").textContent=time1;
+
+if(time1<=0){
+
+sound(700,.2);
+
+alert("Jagan escaped! 😎❤️");
+
+endGame1();
+
+}
+
+},1000);
+
+}
+
+
+function moveJagan(){
+
+if(!running1)return;
+
+let jagan=document.getElementById("jagan1");
+
+let x=10+Math.random()*75;
+let y=10+Math.random()*75;
+
+jagan.style.left=x+"%";
+jagan.style.top=y+"%";
+
+score1++;
+
+document.getElementById("score1").textContent=score1;
+
+sound(500,.08);
+
+}
+
+
+function endGame1(){
+
+running1=false;
+
+clearInterval(game1Timer);
+clearInterval(game1Move);
+
+go(4);
+
+}
+
+
+/* GAME 2 */
+
+let game2Timer;
+let score2=0;
+let game2Running=false;
+let obstacleTimer;
+
+function startGame2(){
+
+go(6);
+
+clearInterval(game2Timer);
+clearInterval(obstacleTimer);
+
+score2=0;
+game2Running=true;
+
+document.getElementById("score2").textContent=score2;
+
+let runner=document.getElementById("runner");
+let chaser=document.getElementById("chaser");
+
+runner.classList.remove("jump");
+
+runner.style.left="70px";
+chaser.style.left="15px";
+
+
+document.querySelectorAll(".obstacle")
+.forEach(o=>o.remove());
+
+
+game2Timer=setInterval(()=>{
+
+if(!game2Running)return;
+
+score2++;
+
+document.getElementById("score2").textContent=score2;
+
+chaser.style.left=
+Math.min(60,15+score2*.03)+"px";
+
+if(score2%10===0)sound(650,.08);
+
+},500);
+
+
+obstacleTimer=setInterval(createObstacle,1800);
+
+}
+
+
+function createObstacle(){
+
+if(!game2Running)return;
+
+let obstacle=document.createElement("div");
+
+obstacle.className="obstacle";
+obstacle.innerHTML="🌹";
+
+obstacle.style.left="100%";
+
+document.getElementById("game2")
+.appendChild(obstacle);
+
+
+let move=setInterval(()=>{
+
+if(!game2Running){
+
+clearInterval(move);
+obstacle.remove();
+return;
+
+}
+
+let x=obstacle.offsetLeft;
+
+obstacle.style.left=(x-7)+"px";
+
+
+let runner=document.getElementById("runner");
+
+let r=runner.getBoundingClientRect();
+let o=obstacle.getBoundingClientRect();
+
+
+if(
+r.right>o.left &&
+r.left<o.right &&
+r.bottom>o.top &&
+r.top<o.bottom
+){
+
+if(!runner.classList.contains("jump")){
+
+sound(130,.4);
+
+alert("Kalpana caught Jagan! 😂❤️");
+
+gameOver2();
+
+}
+
+}
+
+
+if(x<-60){
+
+clearInterval(move);
+obstacle.remove();
+
+}
+
+},30);
+
+}
+
+
+function jump(){
+
+if(!game2Running)return;
+
+let runner=document.getElementById("runner");
+
+if(runner.classList.contains("jump"))return;
+
+runner.classList.add("jump");
+
+sound(600,.1);
+
+setTimeout(()=>{
+runner.classList.remove("jump");
+},650);
+
+}
+
+
+function gameOver2(){
+
+game2Running=false;
+
+clearInterval(game2Timer);
+clearInterval(obstacleTimer);
+
+let best=
+Number(localStorage.getItem("jaganBest")||0);
+
+if(score2>best){
+
+localStorage.setItem("jaganBest",score2);
+best=score2;
+
+}
+
+document.getElementById("best2").textContent=best;
+
+}
+
+
+/* TOUCH / CLICK JUMP */
+
+document.getElementById("game2")
+.addEventListener("click",function(){
+
+jump();
 
 });
 
 
-
-/* ========================= */
 /* FLOATING HEARTS */
-/* ========================= */
 
 function createHeart(){
 
-    const heart =
-        document.createElement("div");
+let h=document.createElement("div");
 
-    heart.className =
-        "floating-heart";
+h.className="floating-heart";
+h.innerHTML="❤️";
 
-    heart.innerHTML =
-        "❤️";
+h.style.left=Math.random()*100+"vw";
 
-    heart.style.left =
-        Math.random() * 100 + "vw";
+h.style.animationDuration=
+4+Math.random()*5+"s";
 
-    heart.style.animationDuration =
-        (4 + Math.random() * 5) + "s";
+document.body.appendChild(h);
 
-    document.body.appendChild(heart);
-
-
-    setTimeout(function(){
-
-        heart.remove();
-
-    },9000);
+setTimeout(()=>h.remove(),9000);
 
 }
 
-
 setInterval(createHeart,700);
+
+
+/* ENTER KEY */
+
+document.getElementById("code")
+.addEventListener("keydown",e=>{
+
+if(e.key==="Enter")checkCode();
+
+});
 
 </script>
 
-
 </body>
-</html>
+    </html>
