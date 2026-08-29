@@ -2,943 +2,2495 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>For Kalpana ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JK — Our Little World ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09070b;
+  --card:#151016;
+  --card2:#1b1219;
+  --pink:#ff5c91;
+  --rose:#ff9fbb;
+  --cream:#fff3f7;
+  --muted:#bda8b1;
+  --line:#ffffff16;
+  --shadow:0 24px 70px #0009;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
 
 body{
-font-family:Georgia,"Times New Roman",serif;
-background:#10060c;
-color:white;
-overflow-x:hidden
-}
-
-.page{
-min-height:100vh;
-display:none;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:22px;
-position:relative
-}
-
-.page.active{display:flex}
-
-.content{
-width:100%;
-max-width:760px;
-position:relative;
-z-index:2
-}
-
-.heart{
-font-size:70px;
-animation:beat 1.5s infinite;
-margin-bottom:15px
-}
-
-@keyframes beat{
-50%{transform:scale(1.15)}
-}
-
-h1{
-font-size:clamp(38px,8vw,65px);
-margin-bottom:15px
-}
-
-.subtitle{
-color:#f6b4c9;
-font-size:18px;
-line-height:1.7
-}
-
-.small{
-color:#c991a6;
-font-size:14px;
-margin-top:15px
+  font-family:"DM Sans",sans-serif;
+  background:
+  radial-gradient(circle at 20% 0%,#3a1326 0,#12090f 28%,var(--bg) 65%);
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden
 }
 
 button{
-margin:18px 7px 0;
-padding:14px 28px;
-border:0;
-border-radius:50px;
-background:linear-gradient(135deg,#ff477e,#ff174f);
-color:white;
-font-size:16px;
-cursor:pointer;
-box-shadow:0 8px 30px #ff174f44
+  font:inherit
 }
 
-button:hover{transform:scale(1.05)}
-
-.box{
-background:#ffffff0d;
-border:1px solid #ffffff20;
-padding:32px 22px;
-border-radius:25px;
-backdrop-filter:blur(15px)
+a{
+  text-decoration:none;
+  color:inherit
 }
 
-input{
-width:100%;
-max-width:280px;
-padding:15px;
-margin:22px 0;
-border-radius:12px;
-border:1px solid #754052;
-background:#1b0b12;
-color:white;
-text-align:center;
-font-size:21px;
-letter-spacing:6px
+.app{
+  min-height:100vh
 }
 
-.error{
-display:none;
-color:#ff7194;
-margin-top:10px
+/* NAVIGATION */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px clamp(16px,4vw,55px);
+  background:#09070bdd;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line)
+}
+
+.logo{
+  font-family:"Playfair Display";
+  font-size:25px;
+  font-weight:700
+}
+
+.logo span{
+  color:var(--pink)
+}
+
+.navlinks{
+  display:flex;
+  gap:7px;
+  overflow:auto
+}
+
+.navlinks button{
+  border:0;
+  background:transparent;
+  color:#cdbbc2;
+  padding:10px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  white-space:nowrap
+}
+
+.navlinks button:hover{
+  background:#ff5c9118;
+  color:#fff
+}
+
+.cart{
+  border:1px solid #ff9fbb44;
+  background:#ff5c9115;
+  color:#fff;
+  border-radius:14px;
+  padding:10px 14px;
+  cursor:pointer
+}
+
+/* HERO */
+
+.hero{
+  max-width:1180px;
+  margin:auto;
+  padding:80px 22px 45px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:45px;
+  align-items:center
+}
+
+.kicker{
+  color:var(--rose);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:700
+}
+
+h1,h2,h3{
+  font-family:"Playfair Display",serif
+}
+
+.hero h1{
+  font-size:clamp(48px,7vw,92px);
+  line-height:.98;
+  margin:18px 0
+}
+
+.script{
+  font-family:"Great Vibes";
+  font-size:clamp(40px,6vw,68px);
+  color:var(--rose)
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.8;
+  max-width:650px
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px
+}
+
+.btn{
+  border:0;
+  border-radius:999px;
+  padding:14px 22px;
+  background:linear-gradient(135deg,#ff7ba7,#ff386f);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 14px 35px #ff386f33
+}
+
+.btn.ghost{
+  background:#ffffff09;
+  border:1px solid var(--line);
+  box-shadow:none
+}
+
+.hero-card{
+  min-height:430px;
+  border-radius:34px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,#3b162a,#100a0e);
+  border:1px solid #ffb2c522;
+  box-shadow:var(--shadow)
+}
+
+.orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(2px)
+}
+
+.orb.a{
+  width:240px;
+  height:240px;
+  background:#ff4f8d33;
+  top:-50px;
+  right:-30px
+}
+
+.orb.b{
+  width:170px;
+  height:170px;
+  background:#ffc2d933;
+  bottom:20px;
+  left:-50px
+}
+
+.hero-art{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center
+}
+
+.heart-big{
+  font-size:150px;
+  filter:drop-shadow(0 20px 30px #ff4f8d44);
+  animation:pulse 2s infinite
+}
+
+@keyframes pulse{
+  50%{
+    transform:scale(1.08)
+  }
+}
+
+.float{
+  position:absolute;
+  animation:float 7s linear infinite;
+  opacity:.6
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-120vh) rotate(20deg);
+    opacity:0
+  }
+}
+
+/* SECTIONS */
+
+.section{
+  max-width:1180px;
+  margin:auto;
+  padding:60px 22px
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:24px
+}
+
+.section-head p{
+  color:var(--muted);
+  margin-top:7px
+}
+
+/* EXPLORE CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px
+}
+
+.card{
+  background:linear-gradient(180deg,#ffffff0a,#ffffff04);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  min-height:190px;
+  cursor:pointer;
+  transition:.25s;
+  box-shadow:0 12px 40px #0003
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#ff9fbb44
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:18px
+}
+
+.card h3{
+  font-size:23px;
+  margin-bottom:7px
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.6
+}
+
+/* NOTES */
+
+.note-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.note{
+  background:#fff5f708;
+  border:1px solid #ffb4c81c;
+  border-radius:22px;
+  padding:25px;
+  position:relative;
+  overflow:hidden
+}
+
+.note:before{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:#ff5c9115;
+  right:-35px;
+  top:-35px
+}
+
+.note b{
+  display:block;
+  color:#ffb5ca;
+  margin-bottom:9px
+}
+
+.note p{
+  line-height:1.7;
+  color:#eee0e5
+}
+
+/* SHAYARI */
+
+.shayari-wrap{
+  background:linear-gradient(145deg,#29121e,#11090e);
+  border:1px solid #ffb4c822;
+  border-radius:30px;
+  padding:40px;
+  box-shadow:var(--shadow)
 }
 
 .shayari{
-background:#ffffff0d;
-border:1px solid #ffb4c81f;
-padding:30px 22px;
-border-radius:25px;
-line-height:2;
-font-size:18px
+  font-family:"Playfair Display";
+  font-size:21px;
+  line-height:2;
+  color:#ffeaf0;
+  text-align:center
 }
 
-.name{
-margin-top:25px;
-font-size:25px;
-color:#ff9fbb;
-font-style:italic
+.signature{
+  font-family:"Great Vibes";
+  font-size:38px;
+  color:var(--rose);
+  margin-top:25px;
+  text-align:right
 }
 
-/* MENU */
-
-.menu{
-display:grid;
-grid-template-columns:1fr;
-gap:15px;
-margin-top:30px
-}
-
-.menu button{
-width:100%;
-margin:0;
-font-size:18px
-}
-
-/* PHOTOS */
-
-.memory-page{
-align-items:flex-start;
-overflow-y:auto;
-padding-top:40px;
-padding-bottom:50px
-}
+/* MEMORIES */
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-top:25px
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px
 }
 
 .photo{
-background:#ffffff0d;
-padding:7px;
-border-radius:18px
+  border-radius:24px;
+  overflow:hidden;
+  background:#160d13;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow)
 }
 
 .photo img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:13px
+  width:100%;
+  display:block;
+  aspect-ratio:4/3;
+  object-fit:cover
+}
+
+.photo figcaption{
+  padding:12px 15px;
+  color:#d9c4cc
+}
+
+/* SHOP */
+
+.shop{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.product{
+  overflow:hidden;
+  border-radius:24px;
+  background:#160e14;
+  border:1px solid var(--line)
+}
+
+.product-art{
+  height:210px;
+  display:grid;
+  place-items:center;
+  font-size:80px;
+  background:radial-gradient(circle,#ff8eaf33,#1b0d15)
+}
+
+.product-body{
+  padding:18px
+}
+
+.price{
+  font-weight:700;
+  color:#ffb4c8;
+  margin:8px 0 14px
+}
+
+.add{
+  width:100%;
+  border:1px solid #ff9fbb44;
+  background:#ff5c9117;
+  color:#fff;
+  padding:12px;
+  border-radius:12px;
+  cursor:pointer
+}
+
+/* MEMORY LOCK */
+
+.lock{
+  max-width:520px;
+  margin:0 auto;
+  background:#ffffff08;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:30px;
+  text-align:center
+}
+
+.lock input{
+  width:100%;
+  padding:14px;
+  border-radius:13px;
+  border:1px solid #ff9fbb33;
+  background:#0d090c;
+  color:#fff;
+  text-align:center;
+  font-size:18px;
+  margin:16px 0;
+  outline:none
+}
+
+.hint{
+  font-size:13px;
+  color:var(--muted)
 }
 
 /* GAME */
 
-.game-page{
-align-items:flex-start;
-padding-top:25px;
-overflow-y:auto
+.gamebox{
+  background:#0d0a0f;
+  border:1px solid #ff9fbb2d;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:var(--shadow)
 }
 
-.game-info{
-display:flex;
-justify-content:space-around;
-margin:15px 0;
-color:#ffc1d2
+.game-top{
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  color:#ffc1d1
 }
 
-.game{
-position:relative;
-width:100%;
-max-width:700px;
-height:480px;
-margin:auto;
-overflow:hidden;
-border-radius:25px;
-border:2px solid #ff477e55;
-background:linear-gradient(#260c1c,#10060c)
+.canvas-wrap{
+  position:relative
 }
 
-/* GAME 1 */
-
-.player{
-position:absolute;
-font-size:48px;
-user-select:none;
-transition:left .12s,top .12s
+.gamecanvas{
+  display:block;
+  width:100%;
+  height:auto;
+  background:linear-gradient(#190d19,#09070b)
 }
 
-.jagan{z-index:5}
-.kalpana{z-index:4}
-
-/* GAME 2 */
-
-.runner-ground{
-position:absolute;
-bottom:0;
-height:75px;
-width:100%;
-background:#24101b
+.game-controls{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  padding:16px;
+  flex-wrap:wrap
 }
 
-.runner{
-position:absolute;
-bottom:65px;
-left:70px;
-font-size:50px;
-z-index:5
+/* CART */
+
+.cart-panel{
+  position:fixed;
+  right:18px;
+  top:75px;
+  width:min(390px,calc(100vw - 36px));
+  background:#170e14;
+  border:1px solid #ffb4c82b;
+  border-radius:22px;
+  padding:20px;
+  z-index:120;
+  box-shadow:var(--shadow);
+  display:none
 }
 
-.chaser{
-position:absolute;
-bottom:65px;
-left:15px;
-font-size:48px;
-z-index:4
+.cart-panel.open{
+  display:block
 }
 
-.obstacle{
-position:absolute;
-bottom:65px;
-font-size:38px
+.cart-row{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:12px 0;
+  border-bottom:1px solid var(--line)
 }
 
-.jump{
-animation:jump .65s ease
+.cart-empty{
+  color:var(--muted);
+  padding:20px 0
 }
 
-@keyframes jump{
-50%{transform:translateY(-150px)}
+.checkout{
+  margin-top:16px;
+  width:100%
 }
 
-/* HEARTS */
+/* MODAL */
 
-.floating-heart{
-position:fixed;
-bottom:-30px;
-font-size:20px;
-animation:float 6s linear forwards;
-opacity:.5;
-pointer-events:none
+.modal{
+  position:fixed;
+  inset:0;
+  background:#000b;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:200;
+  padding:20px
 }
 
-@keyframes float{
-to{
-transform:translateY(-110vh);
-opacity:0
-}
+.modal.open{
+  display:flex
 }
 
-@media(max-width:600px){
-
-.gallery{
-grid-template-columns:1fr
+.modal-card{
+  width:min(620px,100%);
+  background:#170e14;
+  border:1px solid #ffb4c82b;
+  border-radius:28px;
+  padding:30px;
+  box-shadow:var(--shadow);
+  max-height:85vh;
+  overflow:auto
 }
 
-.photo img{
-height:auto;
-max-height:550px
+.modal-card h2{
+  font-size:34px;
+  margin-bottom:12px
 }
 
-.game{
-height:430px
+.modal-card p{
+  color:#dbc9d0;
+  line-height:1.8
 }
 
+.close{
+  float:right;
+  background:#fff0;
+  border:0;
+  color:#fff;
+  font-size:25px;
+  cursor:pointer
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  padding:60px 22px;
+  color:#8f7983;
+  border-top:1px solid var(--line)
+}
+
+.footer strong{
+  color:#ffb1c8
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  bottom:22px;
+  left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:#24121b;
+  border:1px solid #ff9fbb44;
+  padding:12px 18px;
+  border-radius:999px;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:300
+}
+
+.toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0)
+}
+
+.hidden{
+  display:none!important
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:50px
+  }
+
+  .hero-card{
+    min-height:300px
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .shop{
+    grid-template-columns:1fr 1fr
+  }
+
+  .note-grid{
+    grid-template-columns:1fr
+  }
+
+  .nav{
+    align-items:flex-start;
+    gap:10px;
+    flex-wrap:wrap
+  }
+
+  .navlinks{
+    width:100%;
+    order:3
+  }
+}
+
+@media(max-width:560px){
+
+  .cards,
+  .shop,
+  .gallery{
+    grid-template-columns:1fr
+  }
+
+  .hero h1{
+    font-size:53px
+  }
+
+  .section{
+    padding-top:40px
+  }
+
+  .shayari-wrap{
+    padding:25px
+  }
+
+  .shayari{
+    font-size:18px
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- PAGE 1 -->
+<div class="app">
 
-<section class="page active" id="page1">
-<div class="content">
+<header class="nav">
 
-<div class="heart">❤️</div>
+  <div class="logo">
+    J<span>K</span>
+    <small style="font-size:12px;color:#a78d98">
+      our little world
+    </small>
+  </div>
 
-<h1>Hey You...</h1>
+  <nav class="navlinks">
 
-<p class="subtitle">
-This little place exists for one special person.
-<br>
-And maybe... you already know who you are.
-</p>
+    <button onclick="scrollToId('home')">
+      Home
+    </button>
 
-<button onclick="go(2)">R U JK</button>
+    <button onclick="scrollToId('shayari')">
+      Shayari
+    </button>
 
-<p class="small">
-A little surprise is waiting inside...
-</p>
+    <button onclick="scrollToId('memories')">
+      Memories
+    </button>
 
-</div>
+    <button onclick="scrollToId('games')">
+      Games
+    </button>
+
+    <button onclick="scrollToId('shop')">
+      Love Shop
+    </button>
+
+    <button onclick="scrollToId('notes')">
+      Notes
+    </button>
+
+  </nav>
+
+  <button class="cart" onclick="toggleCart()">
+    🛒 <span id="cartCount">0</span>
+  </button>
+
+</header>
+
+
+<!-- CART -->
+
+<aside class="cart-panel" id="cartPanel">
+
+  <button class="close" onclick="toggleCart()">
+    ×
+  </button>
+
+  <h2 style="font-family:'Playfair Display';margin-bottom:12px">
+    Your Love Cart ❤️
+  </h2>
+
+  <div id="cartItems"></div>
+
+  <button class="btn checkout" onclick="checkout()">
+    Proceed to shopping →
+  </button>
+
+</aside>
+
+
+<main>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+  <div>
+
+    <div class="kicker">
+      A website made with feelings
+    </div>
+
+    <h1>
+      For <span style="color:#ff86aa">
+        Kalpana
+      </span>
+    </h1>
+
+    <div class="script">
+      my one & only
+    </div>
+
+    <p style="margin-top:18px">
+      Not a normal website. It's a tiny little world
+      where every button, note, memory and game has
+      one purpose — to make you smile.
+    </p>
+
+    <div class="cta">
+
+      <button class="btn"
+        onclick="scrollToId('shayari')">
+        Read something for you ❤️
+      </button>
+
+      <button class="btn ghost"
+        onclick="scrollToId('shop')">
+        Enter the Love Shop
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-card">
+
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+
+    <div class="hero-art">
+      <div class="heart-big">
+        💗
+      </div>
+    </div>
+
+    <div class="float"
+      style="left:12%;bottom:-20px;animation-delay:0s">
+      ♡
+    </div>
+
+    <div class="float"
+      style="left:70%;bottom:-30px;animation-delay:2s">
+      ♥
+    </div>
+
+    <div class="float"
+      style="left:42%;bottom:-20px;animation-delay:4s">
+      ✦
+    </div>
+
+  </div>
+
 </section>
 
 
-<!-- PAGE 2 -->
+<!-- EXPLORE -->
 
-<section class="page" id="page2">
-<div class="content">
+<section class="section">
 
-<div class="box">
+  <div class="section-head">
 
-<div class="heart" style="font-size:55px">🔐</div>
+    <div>
 
-<h1 style="font-size:40px">Only For You</h1>
+      <div class="kicker">
+        Explore
+      </div>
 
-<p class="subtitle">Enter the secret code</p>
+      <h2 style="font-size:38px">
+        Our little world
+      </h2>
 
-<p class="small">Hint: JK DOB</p>
+      <p>
+        Choose anything you want.
+      </p>
 
-<input id="code" maxlength="4" type="password" placeholder="••••">
+    </div>
 
-<br>
+  </div>
 
-<button onclick="checkCode()">Unlock ❤️</button>
 
-<p class="error" id="error">
-That's not the right code ❤️
-</p>
+  <div class="cards">
 
-</div>
+    <div class="card"
+      onclick="scrollToId('shayari')">
 
-</div>
+      <div class="icon">
+        📝
+      </div>
+
+      <h3>
+        Shayari
+      </h3>
+
+      <p>
+        Words for her eyes, smile, lips
+        and everything that makes her special.
+      </p>
+
+    </div>
+
+
+    <div class="card"
+      onclick="unlockMemories()">
+
+      <div class="icon">
+        📸
+      </div>
+
+      <h3>
+        Memories
+      </h3>
+
+      <p>
+        A private little album —
+        locked with our JK password.
+      </p>
+
+    </div>
+
+
+    <div class="card"
+      onclick="scrollToId('games')">
+
+      <div class="icon">
+        🎮
+      </div>
+
+      <h3>
+        Games
+      </h3>
+
+      <p>
+        A proper mini love game with
+        graphics, score and movement.
+      </p>
+
+    </div>
+
+
+    <div class="card"
+      onclick="scrollToId('shop')">
+
+      <div class="icon">
+        🎁
+      </div>
+
+      <h3>
+        Love Shop
+      </h3>
+
+      <p>
+        Add cute things to the cart
+        and see what happens at checkout.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
 
-<!-- PAGE 3 -->
+<!-- SHAYARI -->
 
-<section class="page" id="page3">
-<div class="content">
+<section class="section" id="shayari">
 
-<div class="heart">💗</div>
+  <div class="section-head">
 
-<h1 style="font-size:42px">
-For You, Kalpana
-</h1>
+    <div>
 
-<div class="shayari">
+      <div class="kicker">
+        For her
+      </div>
 
-Teri aankhon mein kuch aisi baat hai,<br>
-ki khamoshi bhi unmein ek jazbaat hai.<br><br>
+      <h2 style="font-size:38px">
+        A few words...
+      </h2>
 
-Teri palken jab dheere se jhukti hain,<br>
-jaise chandni raat mein sitare chupte hain.<br><br>
+      <p>
+        Some feelings are easier to write than say.
+      </p>
 
-Tere honton ki woh halki si muskaan,<br>
-mere liye ban jaati hai poori ek dastaan.<br><br>
+    </div>
 
-Tere gaalon ki woh masoom si laali,<br>
-jaise subah ki pehli kiran ho nirali.<br><br>
+  </div>
 
-Teri har ada, tera har andaaz,<br>
-dil ko kar deta hai ek pal mein be-awaaz.<br><br>
 
-Teri khoobsurti ko lafzon mein kaise bayan karun,<br>
-tu saamne ho to bas tujhe dekhta rahun.
+  <div class="shayari-wrap">
 
-<div class="name">
-— Kalpana, My Love ❤️
-</div>
+    <div class="shayari">
 
-</div>
+      Teri aankhon mein kuch aisi baat hai,
+      <br>
 
-<button onclick="go(4)">Continue ❤️</button>
+      ki khamoshi bhi unmein ek jazbaat hai.
+      <br><br>
 
-</div>
+      Teri palken jab dheere se jhukti hain,
+      <br>
+
+      jaise chandni raat mein sitare chupte hain.
+      <br><br>
+
+      Tere honton ki woh halki si muskaan,
+      <br>
+
+      mere liye ban jaati hai poori ek dastaan.
+      <br><br>
+
+      Teri har ada, tera har andaaz,
+      <br>
+
+      dil ko kar deta hai ek pal mein be-awaaz.
+      <br><br>
+
+      Teri khoobsurti ko lafzon mein kaise bayan karun,
+      <br>
+
+      tu saamne ho to bas tujhe dekhta rahun.
+
+    </div>
+
+
+    <div class="signature">
+      — Jagan, for Kalpana ❤️
+    </div>
+
+  </div>
+
 </section>
 
 
-<!-- PAGE 4 MENU -->
+<!-- NOTES -->
 
-<section class="page" id="page4">
-<div class="content">
+<section class="section" id="notes">
 
-<div class="heart">💕</div>
+  <div class="section-head">
 
-<h1 style="font-size:42px">
-Our Little World
-</h1>
+    <div>
 
-<p class="subtitle">
-Choose what you want to explore ❤️
-</p>
+      <div class="kicker">
+        Tiny notes
+      </div>
 
-<div class="menu">
+      <h2 style="font-size:38px">
+        Things I wish I could say
+      </h2>
 
-<button onclick="startGame1()">
-🎮 Jagan & Kalpana — Catch Me
-</button>
+    </div>
 
-<button onclick="startGame2()">
-🏃 Jagan Runner — Kalpana Chase
-</button>
+  </div>
 
-<button onclick="go(7)">
-📸 Our Memories
-</button>
 
-</div>
+  <div class="note-grid">
 
-</div>
+    <div class="note">
+
+      <b>
+        Note 01
+      </b>
+
+      <p>
+        Sorry... ek baar last time meri baat
+        sun lo. Main bas chahta hoon ki hum
+        ek baar dil se baat kar lein.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <b>
+        Note 02
+      </b>
+
+      <p>
+        Maaf kar do agar meri kisi baat ne
+        tumhe hurt kiya. Main tumhari feelings
+        ko samajhna chahta hoon.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <b>
+        Note 03
+      </b>
+
+      <p>
+        Gussa ho sakti ho, naraz reh sakti ho...
+        bas kabhi meri baat sunne ka mann ho
+        to ek baar baat kar lena.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <b>
+        Note 04
+      </b>
+
+      <p>
+        Sorry for the moments I could have
+        handled better. I can't change yesterday,
+        but I can change how I love tomorrow.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <b>
+        Note 05
+      </b>
+
+      <p>
+        Ek message kaafi hai. Koi pressure nahi —
+        bas agar dil kahe to baat kar lena.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <b>
+        Note 06
+      </b>
+
+      <p>
+        Some people become a memory.
+        Some become a part of you.
+        You became my favourite part.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
 
-<!-- GAME 1 -->
+<!-- LOVE SHOP -->
 
-<section class="page game-page" id="page5">
-<div class="content">
+<section class="section" id="shop">
 
-<h1 style="font-size:35px">
-Catch Me ❤️
-</h1>
+  <div class="section-head">
 
-<p class="subtitle">
-Jagan is trying to escape... Kalpana is coming to catch him!
-</p>
+    <div>
 
-<div class="game-info">
-<div>Jagan 🧑 <span id="score1">0</span></div>
-<div>Time ⏱️ <span id="time1">30</span></div>
-</div>
+      <div class="kicker">
+        Just for fun
+      </div>
 
-<div class="game" id="game1">
+      <h2 style="font-size:38px">
+        The Love Shop 🛍️
+      </h2>
 
-<div class="player jagan" id="jagan1">🧑</div>
-<div class="player kalpana" id="kalpana1">👩</div>
+      <p>
+        Add anything you want to the cart.
+      </p>
 
-</div>
+    </div>
 
-<button onclick="moveJagan()">
-🏃 Jagan Run
-</button>
+  </div>
 
-<button onclick="endGame1()">
-← Back
-</button>
 
-<p class="small">
-Keep tapping “Jagan Run” before Kalpana catches him!
-</p>
+  <div class="shop">
 
-</div>
+    <article class="product">
+
+      <div class="product-art">
+        🌹
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          A Rose For You
+        </h3>
+
+        <div class="price">
+          ₹0 • priceless
+        </div>
+
+        <button class="add"
+          onclick="addCart('A Rose For You','🌹')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-art">
+        💌
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          One Sorry Letter
+        </h3>
+
+        <div class="price">
+          ₹0 • from the heart
+        </div>
+
+        <button class="add"
+          onclick="addCart('One Sorry Letter','💌')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-art">
+        🧸
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          One Warm Hug
+        </h3>
+
+        <div class="price">
+          ₹0 • unlimited
+        </div>
+
+        <button class="add"
+          onclick="addCart('One Warm Hug','🧸')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-art">
+        ✨
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          A Fresh Start
+        </h3>
+
+        <div class="price">
+          ₹0 • no expiry
+        </div>
+
+        <button class="add"
+          onclick="addCart('A Fresh Start','✨')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-art">
+        ☕
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          One Long Conversation
+        </h3>
+
+        <div class="price">
+          ₹0 • whenever you want
+        </div>
+
+        <button class="add"
+          onclick="addCart('One Long Conversation','☕')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-art">
+        💖
+      </div>
+
+      <div class="product-body">
+
+        <h3>
+          My Whole Heart
+        </h3>
+
+        <div class="price">
+          ₹0 • already yours
+        </div>
+
+        <button class="add"
+          onclick="addCart('My Whole Heart','💖')">
+          Add to cart
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
 </section>
 
 
-<!-- GAME 2 -->
+<!-- GAME -->
 
-<section class="page game-page" id="page6">
-<div class="content">
+<section class="section" id="games">
 
-<h1 style="font-size:35px">
-Jagan Runner 🏃
-</h1>
+  <div class="section-head">
 
-<p class="subtitle">
-Run, jump and don't let Kalpana catch you!
-</p>
+    <div>
 
-<div class="game-info">
-<div>Score ⭐ <span id="score2">0</span></div>
-<div>Best ❤️ <span id="best2">0</span></div>
-</div>
+      <div class="kicker">
+        Mini game
+      </div>
 
-<div class="game" id="game2">
+      <h2 style="font-size:38px">
+        Jagan × Kalpana — Heart Chase
+      </h2>
 
-<div class="runner" id="runner">🧑</div>
-<div class="chaser" id="chaser">👩</div>
+      <p>
+        Collect hearts, dodge roses and keep running.
+      </p>
 
-<div class="runner-ground"></div>
+    </div>
 
-</div>
+  </div>
 
-<button onclick="jump()">⬆️ Jump</button>
 
-<button onclick="startGame2()">🔄 Restart</button>
+  <div class="gamebox">
 
-<button onclick="go(4)">← Back</button>
+    <div class="game-top">
 
-<p class="small">
-Tap Jump or tap the game area to jump.
-</p>
+      <span>
+        Score:
+        <b id="score">0</b>
+      </span>
 
-</div>
+      <span>
+        Best:
+        <b id="best">0</b>
+      </span>
+
+      <span>
+        ❤️ Hearts:
+        <b id="hearts">0</b>
+      </span>
+
+    </div>
+
+
+    <div class="canvas-wrap">
+
+      <canvas
+        id="gameCanvas"
+        class="gamecanvas"
+        width="1000"
+        height="520">
+      </canvas>
+
+    </div>
+
+
+    <div class="game-controls">
+
+      <button class="btn"
+        onclick="startGame()">
+        ▶ Start / Restart
+      </button>
+
+      <button class="btn ghost"
+        onclick="jump()">
+        ⬆ Jump
+      </button>
+
+      <button class="btn ghost"
+        onclick="left()">
+        ←
+      </button>
+
+      <button class="btn ghost"
+        onclick="right()">
+        →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <p class="small" style="text-align:center">
+    Mobile: tap the game, use the buttons, or swipe.
+    Desktop: arrow keys + Space.
+  </p>
+
 </section>
 
 
-<!-- PHOTOS -->
+<!-- MEMORIES -->
 
-<section class="page memory-page" id="page7">
-<div class="content">
+<section class="section" id="memories">
 
-<div class="heart" style="font-size:55px">
-📸
-</div>
+  <div class="section-head">
 
-<h1 style="font-size:42px">
-Our Memories
-</h1>
+    <div>
 
-<p class="subtitle">
-Some moments are too beautiful to forget...
-</p>
+      <div class="kicker">
+        Private album
+      </div>
 
-<div class="gallery">
+      <h2 style="font-size:38px">
+        Our Memories 📸
+      </h2>
 
-<div class="photo">
-<img src="1787715233287.png" alt="Our Memory 1">
-</div>
+      <p>
+        Only this section has a password.
+      </p>
 
-<div class="photo">
-<img src="Snapchat-1027177372.jpg" alt="Our Memory 2">
-</div>
+    </div>
 
-<div class="photo">
-<img src="Snapchat-1190221450.jpg" alt="Our Memory 3">
-</div>
+  </div>
 
-<div class="photo">
-<img src="Snapchat-557918796.jpg" alt="Our Memory 4">
-</div>
 
-</div>
+  <div id="memoryLocked" class="lock">
 
-<button onclick="go(4)">← Back</button>
+    <div style="font-size:55px">
+      🔐
+    </div>
 
-</div>
+    <h2>
+      Only for JK
+    </h2>
+
+    <p style="color:var(--muted);margin-top:8px">
+      Enter the password to open our memories.
+    </p>
+
+    <div class="hint" style="margin-top:14px">
+      Hint: JK means?
+    </div>
+
+    <input
+      id="memoryPass"
+      type="password"
+      placeholder="JAGAN KALPANA">
+
+    <button class="btn"
+      onclick="unlockMemories()">
+      Unlock Memories ❤️
+    </button>
+
+    <p id="passError"
+      class="hidden"
+      style="color:#ff799d;margin-top:12px">
+      Wrong password ❤️
+    </p>
+
+  </div>
+
+
+  <div id="memoryGallery"
+    class="gallery hidden">
+
+    <figure class="photo">
+
+      <img
+        src="1787715233287.png"
+        alt="Memory 1">
+
+      <figcaption>
+        Somewhere between moments,
+        there was us. ❤️
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="photo">
+
+      <img
+        src="Snapchat-1027177372.jpg"
+        alt="Memory 2">
+
+      <figcaption>
+        One picture, a thousand little feelings.
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="photo">
+
+      <img
+        src="Snapchat-1190221450.jpg"
+        alt="Memory 3">
+
+      <figcaption>
+        My favourite kind of memory.
+      </figcaption>
+
+    </figure>
+
+
+    <figure class="photo">
+
+      <img
+        src="Snapchat-557918796.jpg"
+        alt="Memory 4">
+
+      <figcaption>
+        Keep this one forever.
+      </figcaption>
+
+    </figure>
+
+  </div>
+
 </section>
+
+</main>
+
+
+<footer class="footer">
+
+  Made for
+  <strong>Kalpana</strong>
+  — from Jagan, with love ❤️
+
+</footer>
+
+</div>
+
+
+<!-- CHECKOUT MESSAGE -->
+
+<div class="modal" id="checkoutModal">
+
+  <div class="modal-card">
+
+    <button class="close"
+      onclick="closeCheckout()">
+      ×
+    </button>
+
+    <div style="font-size:50px;margin-bottom:8px">
+      💌
+    </div>
+
+    <h2>
+      One last thing...
+    </h2>
+
+    <p style="margin-top:12px">
+
+      Aap Famina PG se Miss Kalpana hain
+      to please ek baar
+      <b style="color:#ffb2c8">
+        7891184315
+      </b>
+      ko unblock karke baat kar lo.
+
+    </p>
+
+    <p style="margin-top:10px">
+      Wo aapse bahut pyaar karte hain. ❤️
+    </p>
+
+    <p style="margin-top:10px;color:#a9949d">
+      No pressure. Bas ek baar baat ho jaaye —
+      itna sa request hai.
+    </p>
+
+    <button class="btn"
+      style="margin-top:20px"
+      onclick="closeCheckout()">
+      Okay ❤️
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
 
 
 <script>
 
+/* TOAST */
+
+const toastEl =
+  document.getElementById("toast");
+
+function toast(t){
+
+  toastEl.textContent = t;
+
+  toastEl.classList.add("show");
+
+  setTimeout(function(){
+
+    toastEl.classList.remove("show");
+
+  },1800);
+
+}
+
+
 /* NAVIGATION */
 
-function go(n){
+function scrollToId(id){
 
-document.querySelectorAll(".page")
-.forEach(p=>p.classList.remove("active"));
-
-document.getElementById("page"+n)
-.classList.add("active");
-
-window.scrollTo(0,0);
-}
-
-
-/* PASSWORD */
-
-function checkCode(){
-
-let code=document.getElementById("code").value;
-let error=document.getElementById("error");
-
-if(code==="2511"){
-
-error.style.display="none";
-go(3);
-
-}else{
-
-error.style.display="block";
-
-}
+  document
+    .getElementById(id)
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
 
 }
 
 
-/* SOUND */
+/* MEMORIES PASSWORD */
+/*
+   ONLY MEMORIES IS PASSWORD PROTECTED
+*/
 
-let audioContext;
+function unlockMemories(){
 
-function sound(freq,duration){
+  const pass =
+    document
+      .getElementById("memoryPass")
+      .value
+      .trim()
+      .toUpperCase();
 
-try{
+  const err =
+    document.getElementById("passError");
 
-audioContext =
-audioContext ||
-new (window.AudioContext || window.webkitAudioContext)();
+  if(pass === "JAGAN KALPANA"){
 
-let osc=audioContext.createOscillator();
-let gain=audioContext.createGain();
+    document
+      .getElementById("memoryLocked")
+      .classList
+      .add("hidden");
 
-osc.frequency.value=freq;
-osc.type="sine";
+    document
+      .getElementById("memoryGallery")
+      .classList
+      .remove("hidden");
 
-gain.gain.setValueAtTime(.08,audioContext.currentTime);
-gain.gain.exponentialRampToValueAtTime(
-.001,
-audioContext.currentTime+duration
-);
+    err.classList.add("hidden");
 
-osc.connect(gain);
-gain.connect(audioContext.destination);
+    toast("Memories unlocked ❤️");
 
-osc.start();
-osc.stop(audioContext.currentTime+duration);
+    document
+      .getElementById("memories")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
 
-}catch(e){}
+  }else{
 
-}
+    err.classList.remove("hidden");
 
-
-/* GAME 1 */
-
-let game1Timer;
-let game1Move;
-let score1=0;
-let time1=30;
-let running1=false;
-
-function startGame1(){
-
-go(5);
-
-clearInterval(game1Timer);
-clearInterval(game1Move);
-
-score1=0;
-time1=30;
-running1=true;
-
-document.getElementById("score1").textContent=score1;
-document.getElementById("time1").textContent=time1;
-
-let jagan=document.getElementById("jagan1");
-let kalpana=document.getElementById("kalpana1");
-
-jagan.style.left="70%";
-jagan.style.top="45%";
-
-kalpana.style.left="10%";
-kalpana.style.top="45%";
-
-
-game1Move=setInterval(()=>{
-
-if(!running1)return;
-
-let x=parseFloat(kalpana.style.left);
-let y=parseFloat(kalpana.style.top);
-
-let jx=parseFloat(jagan.style.left);
-let jy=parseFloat(jagan.style.top);
-
-let dx=jx-x;
-let dy=jy-y;
-
-let distance=Math.sqrt(dx*dx+dy*dy);
-
-if(distance<9){
-
-sound(180,.3);
-
-alert("Kalpana caught Jagan! ❤️");
-
-endGame1();
-
-return;
-
-}
-
-x+=dx*.035;
-y+=dy*.035;
-
-kalpana.style.left=x+"%";
-kalpana.style.top=y+"%";
-
-},80);
-
-
-game1Timer=setInterval(()=>{
-
-time1--;
-
-document.getElementById("time1").textContent=time1;
-
-if(time1<=0){
-
-sound(700,.2);
-
-alert("Jagan escaped! 😎❤️");
-
-endGame1();
-
-}
-
-},1000);
+  }
 
 }
 
 
-function moveJagan(){
+/* LOVE SHOP */
 
-if(!running1)return;
-
-let jagan=document.getElementById("jagan1");
-
-let x=10+Math.random()*75;
-let y=10+Math.random()*75;
-
-jagan.style.left=x+"%";
-jagan.style.top=y+"%";
-
-score1++;
-
-document.getElementById("score1").textContent=score1;
-
-sound(500,.08);
-
-}
+let cart = [];
 
 
-function endGame1(){
+function addCart(name,emoji){
 
-running1=false;
+  cart.push({
+    name:name,
+    emoji:emoji
+  });
 
-clearInterval(game1Timer);
-clearInterval(game1Move);
+  renderCart();
 
-go(4);
+  toast(
+    name + " added ❤️"
+  );
 
 }
 
 
-/* GAME 2 */
+function renderCart(){
 
-let game2Timer;
-let score2=0;
-let game2Running=false;
-let obstacleTimer;
+  document
+    .getElementById("cartCount")
+    .textContent = cart.length;
 
-function startGame2(){
-
-go(6);
-
-clearInterval(game2Timer);
-clearInterval(obstacleTimer);
-
-score2=0;
-game2Running=true;
-
-document.getElementById("score2").textContent=score2;
-
-let runner=document.getElementById("runner");
-let chaser=document.getElementById("chaser");
-
-runner.classList.remove("jump");
-
-runner.style.left="70px";
-chaser.style.left="15px";
+  const el =
+    document.getElementById("cartItems");
 
 
-document.querySelectorAll(".obstacle")
-.forEach(o=>o.remove());
+  if(!cart.length){
+
+    el.innerHTML =
+      '<div class="cart-empty">Your cart is waiting for a little love... 💗</div>';
+
+    return;
+
+  }
 
 
-game2Timer=setInterval(()=>{
+  el.innerHTML =
+    cart.map(function(x,i){
 
-if(!game2Running)return;
+      return `
+        <div class="cart-row">
 
-score2++;
+          <span>
+            ${x.emoji} ${x.name}
+          </span>
 
-document.getElementById("score2").textContent=score2;
+          <button
+            style="border:0;background:none;color:#ff9fbb;cursor:pointer"
+            onclick="removeCart(${i})">
 
-chaser.style.left=
-Math.min(60,15+score2*.03)+"px";
+            Remove
 
-if(score2%10===0)sound(650,.08);
+          </button>
 
-},500);
+        </div>
+      `;
 
-
-obstacleTimer=setInterval(createObstacle,1800);
+    }).join("");
 
 }
 
 
-function createObstacle(){
+function removeCart(i){
 
-if(!game2Running)return;
+  cart.splice(i,1);
 
-let obstacle=document.createElement("div");
-
-obstacle.className="obstacle";
-obstacle.innerHTML="🌹";
-
-obstacle.style.left="100%";
-
-document.getElementById("game2")
-.appendChild(obstacle);
-
-
-let move=setInterval(()=>{
-
-if(!game2Running){
-
-clearInterval(move);
-obstacle.remove();
-return;
-
-}
-
-let x=obstacle.offsetLeft;
-
-obstacle.style.left=(x-7)+"px";
-
-
-let runner=document.getElementById("runner");
-
-let r=runner.getBoundingClientRect();
-let o=obstacle.getBoundingClientRect();
-
-
-if(
-r.right>o.left &&
-r.left<o.right &&
-r.bottom>o.top &&
-r.top<o.bottom
-){
-
-if(!runner.classList.contains("jump")){
-
-sound(130,.4);
-
-alert("Kalpana caught Jagan! 😂❤️");
-
-gameOver2();
-
-}
+  renderCart();
 
 }
 
 
-if(x<-60){
+function toggleCart(){
 
-clearInterval(move);
-obstacle.remove();
+  document
+    .getElementById("cartPanel")
+    .classList
+    .toggle("open");
+
+  renderCart();
 
 }
 
-},30);
+
+function checkout(){
+
+  if(!cart.length){
+
+    toast(
+      "Add something to your cart first ❤️"
+    );
+
+    return;
+
+  }
+
+  document
+    .getElementById("checkoutModal")
+    .classList
+    .add("open");
 
 }
 
+
+function closeCheckout(){
+
+  document
+    .getElementById("checkoutModal")
+    .classList
+    .remove("open");
+
+}
+
+
+/* ========================= */
+/* HEART CHASE GAME */
+/* ========================= */
+
+const c =
+  document.getElementById("gameCanvas");
+
+const ctx =
+  c.getContext("2d");
+
+
+let W = c.width;
+let H = c.height;
+
+let player;
+
+let items = [];
+
+let gameOn = false;
+
+let score = 0;
+
+let hearts = 0;
+
+let best =
+  Number(
+    localStorage.getItem("jkBest") || 0
+  );
+
+let last = 0;
+
+let spawn = 0;
+
+let speed = 6;
+
+let keys = {};
+
+
+document
+  .getElementById("best")
+  .textContent = best;
+
+
+/* RESET GAME */
+
+function resetGame(){
+
+  player = {
+
+    x:150,
+
+    y:H-105,
+
+    w:52,
+
+    h:62,
+
+    vy:0,
+
+    onGround:true
+
+  };
+
+
+  items = [];
+
+  score = 0;
+
+  hearts = 0;
+
+  speed = 6;
+
+  spawn = 0;
+
+
+  document
+    .getElementById("score")
+    .textContent = 0;
+
+  document
+    .getElementById("hearts")
+    .textContent = 0;
+
+}
+
+
+/* START GAME */
+
+function startGame(){
+
+  resetGame();
+
+  gameOn = true;
+
+  requestAnimationFrame(loop);
+
+  toast(
+    "Run, Jagan! ❤️"
+  );
+
+}
+
+
+/* JUMP */
 
 function jump(){
 
-if(!game2Running)return;
+  if(!gameOn)
+    return;
 
-let runner=document.getElementById("runner");
+  if(player.onGround){
 
-if(runner.classList.contains("jump"))return;
+    player.vy = -15;
 
-runner.classList.add("jump");
+    player.onGround = false;
 
-sound(600,.1);
-
-setTimeout(()=>{
-runner.classList.remove("jump");
-},650);
+  }
 
 }
 
 
-function gameOver2(){
+/* LEFT */
 
-game2Running=false;
+function left(){
 
-clearInterval(game2Timer);
-clearInterval(obstacleTimer);
+  if(!gameOn)
+    return;
 
-let best=
-Number(localStorage.getItem("jaganBest")||0);
-
-if(score2>best){
-
-localStorage.setItem("jaganBest",score2);
-best=score2;
-
-}
-
-document.getElementById("best2").textContent=best;
+  player.x =
+    Math.max(
+      45,
+      player.x - 45
+    );
 
 }
 
 
-/* TOUCH / CLICK JUMP */
+/* RIGHT */
 
-document.getElementById("game2")
-.addEventListener("click",function(){
+function right(){
 
-jump();
+  if(!gameOn)
+    return;
 
-});
-
-
-/* FLOATING HEARTS */
-
-function createHeart(){
-
-let h=document.createElement("div");
-
-h.className="floating-heart";
-h.innerHTML="❤️";
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.animationDuration=
-4+Math.random()*5+"s";
-
-document.body.appendChild(h);
-
-setTimeout(()=>h.remove(),9000);
+  player.x =
+    Math.min(
+      W - 90,
+      player.x + 45
+    );
 
 }
 
-setInterval(createHeart,700);
+
+/* KEYBOARD */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    keys[e.key] = true;
+
+    if(e.code === "Space")
+      jump();
+
+    if(e.key === "ArrowLeft")
+      left();
+
+    if(e.key === "ArrowRight")
+      right();
+
+  }
+);
 
 
-/* ENTER KEY */
+document.addEventListener(
+  "keyup",
+  function(e){
 
-document.getElementById("code")
-.addEventListener("keydown",e=>{
+    keys[e.key] = false;
 
-if(e.key==="Enter")checkCode();
+  }
+);
 
-});
+
+/* TOUCH */
+
+c.addEventListener(
+  "click",
+  jump
+);
+
+
+let touchX = 0;
+
+
+c.addEventListener(
+  "touchstart",
+  function(e){
+
+    touchX =
+      e.touches[0].clientX;
+
+  },
+  {passive:true}
+);
+
+
+c.addEventListener(
+  "touchend",
+  function(e){
+
+    let dx =
+      e.changedTouches[0].clientX
+      - touchX;
+
+    if(Math.abs(dx) > 35){
+
+      if(dx > 0)
+        right();
+
+      else
+        left();
+
+    }else{
+
+      jump();
+
+    }
+
+  },
+  {passive:true}
+);
+
+
+/* SPAWN ITEMS */
+
+function spawnItem(){
+
+  const good =
+    Math.random() < .55;
+
+  items.push({
+
+    x:W+30,
+
+    y:
+      H-95 -
+      (
+        good
+        ? Math.random()*170
+        : 0
+      ),
+
+    s:
+      good
+      ? 34
+      : 43,
+
+    good:good,
+
+    type:
+      good
+      ? "heart"
+      : "rose"
+
+  });
+
+}
+
+
+/* COLLISION */
+
+function hit(a,b){
+
+  return (
+
+    a.x < b.x+b.s &&
+
+    a.x+a.w > b.x &&
+
+    a.y < b.y+b.s &&
+
+    a.y+a.h > b.y
+
+  );
+
+}
+
+
+/* DRAW GAME */
+
+function draw(){
+
+  ctx.clearRect(
+    0,
+    0,
+    W,
+    H
+  );
+
+
+  /* BACKGROUND */
+
+  let grd =
+    ctx.createLinearGradient(
+      0,
+      0,
+      0,
+      H
+    );
+
+  grd.addColorStop(
+    0,
+    "#210f20"
+  );
+
+  grd.addColorStop(
+    1,
+    "#09070b"
+  );
+
+  ctx.fillStyle = grd;
+
+  ctx.fillRect(
+    0,
+    0,
+    W,
+    H
+  );
+
+
+  /* STARS */
+
+  for(
+    let i=0;
+    i<35;
+    i++
+  ){
+
+    ctx.fillStyle =
+      "#ffffff55";
+
+    ctx.beginPath();
+
+    ctx.arc(
+      (i*83)%W,
+      (i*47)%250,
+      2,
+      0,
+      Math.PI*2
+    );
+
+    ctx.fill();
+
+  }
+
+
+  /* MOON */
+
+  ctx.fillStyle =
+    "#ffe9f1";
+
+  ctx.beginPath();
+
+  ctx.arc(
+    W-100,
+    85,
+    42,
+    0,
+    Math.PI*2
+  );
+
+  ctx.fill();
+
+
+  ctx.fillStyle =
+    "#210f20";
+
+  ctx.beginPath();
+
+  ctx.arc(
+    W-82,
+    72,
+    42,
+    0,
+    Math.PI*2
+  );
+
+  ctx.fill();
+
+
+  /* GROUND */
+
+  ctx.fillStyle =
+    "#2b1724";
+
+  ctx.fillRect(
+    0,
+    H-55,
+    W,
+    55
+  );
+
+
+  ctx.strokeStyle =
+    "#ff6f9c55";
+
+  ctx.beginPath();
+
+  ctx.moveTo(
+    0,
+    H-55
+  );
+
+  ctx.lineTo(
+    W,
+    H-55
+  );
+
+  ctx.stroke();
+
+
+  /* PLAYER */
+
+  ctx.shadowColor =
+    "#ff6f9c";
+
+  ctx.shadowBlur = 22;
+
+  ctx.font =
+    "54px serif";
+
+  ctx.fillText(
+    "🧑",
+    player.x,
+    player.y+50
+  );
+
+  ctx.shadowBlur = 0;
+
+
+  /* KALPANA */
+
+  ctx.font =
+    "50px serif";
+
+  ctx.fillText(
+    "👩",
+    48,
+    H-65
+  );
+
+
+  /* ITEMS */
+
+  items.forEach(
+    function(o){
+
+      ctx.font =
+        o.s+"px serif";
+
+      ctx.fillText(
+        o.type === "heart"
+          ? "❤️"
+          : "🌹",
+        o.x,
+        o.y+o.s
+      );
+
+    }
+  );
+
+
+  /* START MESSAGE */
+
+  if(!gameOn){
+
+    ctx.fillStyle =
+      "#ffffffbb";
+
+    ctx.font =
+      "600 25px DM Sans";
+
+    ctx.textAlign =
+      "center";
+
+    ctx.fillText(
+      "Press Start to enter the little love chase ❤️",
+      W/2,
+      H/2
+    );
+
+    ctx.textAlign =
+      "left";
+
+  }
+
+}
+
+
+/* GAME LOOP */
+
+function loop(t){
+
+  if(!gameOn){
+
+    draw();
+
+    return;
+
+  }
+
+
+  const dt =
+    Math.min(
+      35,
+      t-last || 16
+    );
+
+  last = t;
+
+
+  /* GRAVITY */
+
+  player.vy += .72;
+
+  player.y += player.vy;
+
+
+  if(
+    player.y > H-105
+  ){
+
+    player.y =
+      H-105;
+
+    player.vy = 0;
+
+    player.onGround = true;
+
+  }
+
+
+  /* MOVEMENT */
+
+  if(keys.ArrowLeft){
+
+    player.x =
+      Math.max(
+        45,
+        player.x-3
+      );
+
+  }
+
+
+  if(keys.ArrowRight){
+
+    player.x =
+      Math.min(
+        W-90,
+        player.x+3
+      );
+
+  }
+
+
+  /* SPAWN */
+
+  spawn += dt;
+
+
+  if(
+    spawn >
+    Math.max(
+      520,
+      1150-score*2
+    )
+  ){
+
+    spawn = 0;
+
+    spawnItem();
+
+  }
+
+
+  /* MOVE ITEMS */
+
+  items.forEach(
+    function(o){
+
+      o.x -= speed;
+
+    }
+  );
+
+
+  /* COLLISION */
+
+  items =
+    items.filter(
+      function(o){
+
+        if(hit(player,o)){
+
+          if(o.good){
+
+            hearts++;
+
+            score += 10;
+
+            document
+              .getElementById("hearts")
+              .textContent =
+              hearts;
+
+            toast(
+              "Heart collected 💗"
+            );
+
+          }else{
+
+            gameOn = false;
+
+            toast(
+              "Kalpana caught Jagan 😂❤️"
+            );
+
+
+            if(score > best){
+
+              best = score;
+
+              localStorage.setItem(
+                "jkBest",
+                best
+              );
+
+              document
+                .getElementById("best")
+                .textContent =
+                best;
+
+            }
+
+          }
+
+          return false;
+
+        }
+
+
+        return o.x > -80;
+
+      }
+    );
+
+
+  /* SCORE */
+
+  score += dt/1000;
+
+  speed +=
+    dt/100000;
+
+
+  document
+    .getElementById("score")
+    .textContent =
+    Math.floor(score);
+
+
+  draw();
+
+
+  requestAnimationFrame(
+    loop
+  );
+
+}
+
+
+/* INITIAL GAME */
+
+resetGame();
+
+draw();
+
+renderCart();
 
 </script>
 
 </body>
-    </html>
+</html>
